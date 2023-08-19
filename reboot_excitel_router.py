@@ -110,7 +110,7 @@ app = Flask(__name__)
 
 @app.route('/reboot_router', methods=['POST'])
 def captcha_call():
-    if request.json.get('secret_key') != "chan101_magicWord":
+    if request.json.get('secret_key') != "magicWord":
         return jsonify({'Message': "who are you ? (OwO)"}), 400
     #try captcha 0 to 29 and loop back
     i = 0
